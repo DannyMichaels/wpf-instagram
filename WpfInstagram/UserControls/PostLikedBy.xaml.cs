@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfInstagram.Database;
 
 namespace WpfInstagram.UserControls
 {
@@ -20,9 +21,24 @@ namespace WpfInstagram.UserControls
   /// </summary>
   public partial class PostLikedBy : UserControl
   {
+        Random Generator;
+
     public PostLikedBy()
     {
-      InitializeComponent();
+        InitializeComponent();
+
+        Generator = new Random(DateTime.Now.Millisecond);
+        PopulatePostLikedByData();
+    }
+
+    private void PopulatePostLikedByData()
+    {
+        List<string> usernames = MockDb.GetPostLikedBy();
+
+        CloseFriend1.Text = usernames[0] + ",";
+        CloseFriend2.Text = usernames[1];
+
+        OtherFriends.Text = $"and {Generator.Next(1, 100)} others";
     }
   }
 }

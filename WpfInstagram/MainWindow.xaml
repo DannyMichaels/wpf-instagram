@@ -7,8 +7,8 @@
     xmlns:local="clr-namespace:WpfInstagram"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="800"
-    Height="450"
+    Width="500"
+    Height="500"
     mc:Ignorable="d">
     <ScrollViewer
         x:Name="MainScrollViewer"

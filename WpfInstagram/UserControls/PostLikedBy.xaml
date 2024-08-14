@@ -18,15 +18,13 @@
         </TextBlock>
 
         <TextBlock
-            Name="CloseFriend1"
+            x:Name="CloseFriend1"
             Margin="3,0,0,0"
-            FontWeight="Bold"
-            Text="_twilight444_" />
+            FontWeight="Bold" />
         <TextBlock
-            Name="CloseFriend2"
+            x:Name="CloseFriend2"
             Margin="3,0,3,0"
-            FontWeight="Bold"
-            Text="lukewolly" />
+            FontWeight="Bold" />
         <TextBlock
             Name="OtherFriends"
             Margin="3,0,3,0"

@@ -28,6 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Faker.Net" Version="2.0.163" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="icons\bookmark.png" />
     <Resource Include="icons\comment.png" />
     <Resource Include="icons\like.png" />

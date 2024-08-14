@@ -3,6 +3,7 @@ using System.IO;
 using System.Windows;
 using System.Reflection;
 using System.Windows.Media.Imaging;
+using WpfInstagram.Models;
 
 namespace WpfInstagram.Database
 {
@@ -59,6 +60,18 @@ namespace WpfInstagram.Database
                 MessageBox.Show($"Error loading image: {ex.Message}");
                 return null;
             }
+        }
+
+        public static List<string> GetPostLikedBy()
+        {
+            List<string> usernames = new List<string>();
+
+            for (int i = 0; i < 2; i++)
+            {
+                usernames.Add(new UserModel().Username);
+            }
+
+            return usernames;
         }
 
         private static string GetProjectDirectory()

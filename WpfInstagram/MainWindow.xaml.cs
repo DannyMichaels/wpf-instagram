@@ -22,9 +22,14 @@ namespace WpfInstagram
     /// </summary>
     public partial class MainWindow : Window
     {
+        Random Generator;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            Generator = new Random(DateTime.Now.Millisecond);
+
             MainStackPanel.Children.Add(new VideoPost(new VideoPostModel()));
             MainStackPanel.Children.Add(new PicturePost(new PicturePostModel()));
             MainStackPanel.Children.Add(new VideoPost(new VideoPostModel()));
@@ -43,11 +48,14 @@ namespace WpfInstagram
                 {
                     for (int i = 0; i < 5; i++)
                     {
-                        PicturePost picturePost = new PicturePost(new PicturePostModel());
-                        MainStackPanel.Children.Add(picturePost);
-
-                        //VideoPost videoPost = new VideoPost(new VideoPostModel());
-                        //MainStackPanel.Children.Add(videoPost);
+                        if (Generator.Next(0,100) < 70)
+                        {
+                            MainStackPanel.Children.Add(new PicturePost(new PicturePostModel()));
+                            }
+                        else
+                        {
+                            MainStackPanel.Children.Add(new VideoPost(new VideoPostModel()));
+                        }
                     }
                 }
             }
