@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <None Remove="NewFolder1\**" />
+    <Page Remove="NewFolder1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="icons\bookmark.png" />
+    <None Remove="icons\comment.png" />
+    <None Remove="icons\like.png" />
+    <None Remove="icons\nolike.png" />
+    <None Remove="icons\post1.jpg" />
+    <None Remove="icons\post2.jpg" />
+    <None Remove="icons\post3.jpg" />
+    <None Remove="icons\send.png" />
+    <None Remove="Videos\cat.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons\bookmark.png" />
+    <Resource Include="icons\comment.png" />
+    <Resource Include="icons\like.png" />
+    <Resource Include="icons\nolike.png" />
+    <Resource Include="icons\post1.jpg" />
+    <Resource Include="icons\post2.jpg" />
+    <Resource Include="icons\post3.jpg" />
+    <Resource Include="icons\send.png" />
+    <Resource Include="Videos\cat.mp4" />
+  </ItemGroup>
+
+</Project>
