@@ -10,15 +10,8 @@
     Width="500"
     Height="500"
     mc:Ignorable="d">
-    <!--<ScrollViewer
-        x:Name="MainScrollViewer"
-        ScrollChanged="MainScrollViewer_ScrollChanged"
-        VerticalScrollBarVisibility="Hidden">
-        <StackPanel x:Name="MainStackPanel" />
-    </ScrollViewer>-->
-
     <Frame
         Name="MainWindowFrame"
-        NavigationUIVisibility="Hidden"
+        NavigationUIVisibility="Visible"
         Source="Pages/HomePage.xaml" />
 </Window>
